@@ -1,0 +1,685 @@
+p,
+	i,
+	li {
+		color: black;
+		/* font-size: 15px; */
+	}
+
+	.posts>article {
+		width: 40%;
+	}
+
+	img {
+		object-fit: contain;
+		/* transform: scale(0.8); */
+		width: auto;
+		height: 400px;
+	}
+
+	h2 {
+		text-align: center !important;
+		text-transform: uppercase;
+
+	}
+
+	.major {
+		text-align: center;
+
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.image img {
+		width: 10vw; /* 15% of the screen width */
+		height: 20vh; /* Fixed height as 20% of the screen height */
+		object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
+	}
+
+	.image {
+		width: 20%;
+	}
+
+	.logo_image img{
+		width: 100%;
+	}
+
+    .Task_1_image img {
+		display: block;
+    width: 100%;
+}
+.task_box {
+    background-color: #fff; /* White background */
+    border-radius: 2rem; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for uplift effect */
+    margin: 1.5rem auto; /* Center the box and add margin */
+    /* max-width: 800px; Maximum width */
+    width: 90%; /* Responsive width */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.task_box h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.task_box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.task_box img {
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+}
+
+.task_box figure {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Equal space between images */
+    align-items: center;
+    width: 80%; /* Width of the container */
+    text-align: center;
+}
+
+.image-text {
+    width: 40%; /* Ensure both images have equal space */
+}
+
+.image-text img {
+    width: 100%; /* 15% of the viewport width */
+    height: 18vw; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.image-text p {
+    margin-top: 10px;
+    font-size: 0.9vw;
+    text-align: justify;
+}
+
+.task2_img_section {
+    display: flex;
+    justify-content: center;
+}
+
+
+.organizers {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the last row */
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    height: 25vw;
+
+    border-radius: 15px; /* More rounded corners */
+    padding: 15px;
+    width: calc(30% - 20px); /* 3 cards in a row with gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within cards */
+}
+
+.card h4 {
+    margin: 0 0 10px;
+}
+
+.card .links {
+    display: flex;
+    justify-content: center; /* Center links within the card */
+    gap: 10px; /* Space between links */
+    flex-wrap: wrap; /* Allow links to wrap in smaller screens */
+}
+
+.card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.organizer-image {
+    /* width: 100%; Make images responsive */
+    height: 60%; /* Maintain aspect ratio */
+	/* width: 100%; */
+    border-radius: 1.375em; /* Match image corners with card corners */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.card p {
+    margin: 0 0 0.5em 0;
+	font-size: 11px;
+}
+
+.intrinsic_image {
+	height: 35vw;
+	width: 100%;
+}
+
+.organizer-sections {
+	display: flex;
+
+}
+
+.content img{
+	    /* width: 120px; */
+		height: 120px;
+		width: 70%;
+}
+
+
+#header .task_links {
+	flex: 0 0 20%
+}
+
+.inner  section {
+    padding: 6em 0 4em 0;
+    border-top: solid 2px rgba(210, 215, 217, 0.75);
+}
+
+
+.intrinsic_section p{
+    padding: 16px;
+    font-size: 90%;
+}
+
+
+/* --------------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+    .task_box {
+        background-color: transparent; /* Remove the background */
+        box-shadow: none; /* Remove the box shadow */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        border: none; /* Remove border */
+        max-width: 100%; /* Allow full width */
+        width: 100%; /* Ensure it takes full width */
+		border-radius: 0rem;
+    }
+
+    .task_box h3, .task_box img, .task_box figure {
+        text-align: left	 ; /* Align text to the left */
+        margin: 0; /* Remove any additional margins */
+        font-size:medium; /* Reset font size */
+        line-height: normal; /* Normal line height */
+        width: 100%; /* Ensure all elements take full width */
+		margin-bottom: 5%;
+    }
+	.task_box p {
+		font-size: inherit;
+		text-align: justify;
+	}
+
+
+	/* .task_box .image */
+
+}
+/* --------------------------------------------------------------------------- */
+/* Media query for screens wider than 600px */
+@media screen and (max-width: 1025px) {
+    .frame {
+        width: 90%; /* Make frame responsive on small screens */
+    }
+    .card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+		height: 31vw;
+    
+        border-radius: 15px; /* More rounded corners */
+        padding: 15px;
+        width: calc(30% - 20px); /* 3 cards in a row with gap */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center text within cards */
+    }
+
+	.organizer-sections {    
+		display: flex;
+		justify-content: space-between;
+	}
+    .image img {
+		width: 18vw;
+		/* height: 20vh; */
+		object-fit: cover;
+	}
+
+	.organizer-images{
+		height: 15vw ;
+	}
+
+	.card {
+		background-color: #f9f9f9;
+		border: 1px solid #ddd;
+		height: 31vw;
+	
+		border-radius: 15px; /* More rounded corners */
+		padding: 15px;
+		width: calc(45% - 20px); /* Adjust width for 2 cards in a row */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		text-align: center; /* Center text within cards */
+	}
+
+	.links a{
+		font-size: 10px;
+	}
+	
+	.card h4 {
+		/* margin: 0 0 10px; */
+		font-size: 12px;
+	}
+
+
+	#header .task_links {
+		flex: 0 0 26%;
+		font-size: 12px;
+
+	}
+	
+}
+
+@media screen and (max-width: 870px) {
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 10px;
+    }
+	.organizer-image {
+		height: 53%;
+		border-radius: 1.375em;
+		margin-bottom: 10px;
+	}
+
+	.image-text p {
+		font-size: 1.4vw;
+	}
+}
+
+
+/* Media query for screens wider than 300px */
+@media screen and (max-width: 700px) {
+    .card {
+		background-color: #f9f9f9;
+		border: 1px solid #ddd;
+		height: 35vw;
+	
+		border-radius: 15px; /* More rounded corners */
+		padding: 15px;
+		width: calc(45% - -8px); /* Adjust width for 2 cards in a row */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		text-align: center; /* Center text within cards */
+	}
+
+	.links a{
+		font-size: 10px;
+	}
+
+	.card .links {
+		display: flex;
+		justify-content: center;
+		gap: 6px;
+		flex-wrap: wrap;
+	}
+
+	.card h4 {
+		margin: 0 0 2px;
+		font-size: 12px;
+	}
+
+	.card p {
+		margin: 0 0 0.5px;
+	}
+
+	#header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #header .logo {
+        font-size: 15px; /* Smaller logo text */
+        margin-bottom: 10px; /* Space between logo and icons */
+    }
+
+    #header ul {
+        flex-direction: column;
+        width: 100%; /* Take full width on mobile */
+        text-align: left;
+    }
+
+    #header ul li {
+        margin: 20px 5px 0 0; /* Space between links */
+    }
+
+    #header ul li a {
+        font-size: 10px; /* Smaller font for mobile */
+    }
+
+	#header .task_links {
+		flex: 0 0 0vw;
+	}
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 12px;
+    }
+	/* .icons {
+		display: contents;
+	} */
+
+	/* .icons li {
+		height: 9px;
+	} */
+
+	#header ul li{
+		height: 10px;
+	}
+
+	ul.icons li {
+		display: flex;
+		padding: 0 1em 0 0;
+	}
+
+	#header {    
+		height: 100px;
+	}
+	
+}
+
+
+
+
+/* @media screen and (max-width: 700px) {
+} */
+
+@media screen and (max-width: 550px) {
+    .card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        height: 51vw;
+        border-radius: 15px;
+        padding: 15px;
+        width: calc(47% - 3px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+	.intrinsic_image {
+		height: 45vw;
+		width: 100%;
+	}
+	
+
+	.card h4 {
+		font-size: 10px;
+	}
+
+	.card p {
+		font-size: 9px;
+	}
+
+	.card .links {
+		gap: 3px;
+	}
+
+	.image-text p {
+		font-size: 1.4vw;
+	}
+
+	#header .task_links {
+		flex: 0 0 0vw;
+	}
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+	.card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        height: 66vw;
+        border-radius: 15px;
+        padding: 15px;
+        width: calc(47% - 3px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+	.organizer-image {
+		height: 50%;
+		border-radius: 1.375em;
+		margin-bottom: 10px;
+	}
+	.image-text p {
+        font-size: 1.5vw;
+    }
+
+	#header .task_links {
+		flex: 0 0 0vw;
+	}
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+
+.image-text p {
+	font-size: 1.5vw;
+}
+
+.image-text img {
+	width: 100%;
+	height: 25vw;
+	display: block;
+	margin: 0 auto;
+}
+
+.image-text {
+	width: 46%;
+}
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+	.image-text p {
+		font-size: 2vw;
+	}
+	
+	.image-text img {
+		width: 100%;
+		height: 38vw;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.image-text {
+		width: 46%;
+	}
+	
+	}
+
+	
+
+@media screen and (max-width: 370px) {
+
+	.card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        height: 68vw;
+        border-radius: 15px;
+        padding: 15px;
+        width: calc(47% - 3px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+	.organizer-image {
+		height: 49%;
+		border-radius: 1.375em;
+		margin-bottom: 10px;
+	}
+
+	.image-text p {
+        font-size: 2.2vw;
+    }
+
+	#header .task_links {
+		flex: 0 0 0vw;
+	}
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 12px;
+    }
+
+
+	.image-text img {
+		width: 100%;
+		height: 48vw;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.image-text {
+		width: 46%;
+	}
+}
+
+
+@media screen and (max-width: 370px) {
+
+	.card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        height: 80vw;
+        border-radius: 15px;
+        padding: 15px;
+        width: calc(47% - 3px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+	.organizer-image {
+		height: 42%;
+		border-radius: 1.375em;
+		margin-bottom: 10px;
+	}
+
+	.image-text p {
+        font-size: 1.8vw;
+    }
+
+	#header .task_links {
+		flex: 0 0 0vw;
+	}
+
+	#header .task_links {
+        flex: 0 0 26%;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+.heading_bannerh1 {
+	font-size: 1.3rem;
+}
+
+
+.heading_bannerh2 {
+	font-size: 0.8rem;
+}
+
+}
+
+/* ------------ for ai_gen_img_detection.html ------------ */
+
+p,
+	i,
+	li {
+		color: black;
+		/* font-size: 15px; */
+	}
+
+	.posts>article {
+		width: 40%;
+	}
+
+	img {
+		object-fit: contain;
+		/* transform: scale(0.8); */
+		width: auto;
+		height: 30vw;
+
+	}
+
+	h2 {
+		text-align: center !important;
+		text-transform: uppercase;
+
+	}
+
+	.major {
+		text-align: center;
+		padding-top: 33px;
+
+
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.image img {
+		height: auto;
+	}
+
+	.slideshow-container {
+		display: flex;
+		/* flex-direction: column; */
+		flex-flow: row;
+		gap: 35px;
+		margin: 2% auto;
+		overflow-y: hidden;
+		width: 100%;
+
+	}
+
+	.mySlides1 {
+		border: 5px solid #f56a6a;
+	}
+
+	#main {
+		width: 70%;
+	}

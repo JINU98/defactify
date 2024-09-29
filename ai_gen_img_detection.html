@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>CT2 : AI-Generated Image Detection</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Header -->
+          <header id="header">
+            <a href="index.html" class="logo"><strong>Defactify 4</strong> Workshop</a>
+            <a href="ai_gen_txt_detection.html" class="task_links task_link1" style="margin: 0 20px 0 0;">
+            <!-- CT2: AI-Generated Text Detection -->
+            <span class="label">CT2: AI-Generated Text Detection</span>
+            </a>
+            <a href="ai_gen_img_detection.html" class="task_links task_link2"
+            ><span class="label"
+              >CT2: AI-Generated Image Detection</span
+            ></a
+            >
+            <!-- <ul class="icons">
+              <li>
+    
+              </li>
+              </ul> -->
+          </header>
+    
+
+          <!-- Content -->
+          <section>
+            <div style="background: url('https://aiisc.ai/defactify/img/background.gif');">
+                <header class="main" style="text-align: center;">
+                    <span class="logo_image main" ><img src="./images/img_detect_shared_task_banner.png" alt="" /></span>
+
+                    <div>
+                        <h1 class="heading_bannerh1" style="color: #fff;"><a href="https://aaai.org/aaai-conference/" target="_blank"
+										rel="noopener noreferrer">@ AAAI 2025</a> </h1>
+								<h2 class="heading_bannerh2" style="color: #fff;">Fourth Workshop on ​Multimodal Fact Checking and Hate Speech
+									Detection <br>
+									February, 2025</h2>
+                    </div>
+
+                </header>
+            </div>
+
+            <!-- <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p> -->
+
+            <hr class="major" />
+            <header class="major" id="about">
+              <h2> CT<sup>2</sup> : AI-Generated Image Detection</h2>
+            </header>
+
+            <h4><a href="https://huggingface.co/datasets/NasrinImp/Defactify2025" target="_blank">Dataset:</a></h4>
+            <p>
+              Several text-to-image generation systems are available today. To
+              determine which types of model-generated images are easier or
+              harder to detect, we will include a diverse range of models, such
+              as Stable Diffusion 3 (SD 3), Stable Diffusion XL (SDXL), Stable
+              Diffusion 2.1 (SD 2.1), DALL-E 3, and Midjourney 6. We will
+              release a dataset of 50K samples for this task, developed based on
+              the MS COCO dataset.
+            </p>
+            <p>
+              The process involves taking the original MS COCO captions and
+              images, feeding the captions into each of the models (SD 3, SDXL,
+              SD 2.1, DALL-E 3, and Midjourney 6), and storing the generated
+              images. This resulting dataset will be referred to as MS COCOAI. A
+              snapshot of the data can be viewed <a href="https://huggingface.co/datasets/NasrinImp/Defactify2025" target="_blank">here</a>.
+            </p>
+
+            <h4>Tasks:</h4>
+            <ol>
+              <li>
+                Task A: This is a binary classification task where the goal is
+                to determine whether each given image was generated by AI or
+                created by a human.
+              </li>
+              <li>
+                Task B: Building on Task A, this task challenges participants to
+                determine which specific model generated a given image.
+                Participants must identify whether the images were produced by
+                models such as SD 3, SDXL, SD 2.1, DALL-E 3, or Midjourney 6.
+              </li>
+            </ol>
+
+            <h4>Baseline:</h4>
+            <p>
+              AI-generated image detection has recently garnered significant
+              research attention. Proposed detection techniques can be broadly
+              categorized into two paradigms: artifact-based detection and
+              feature representation-based detection.
+            </p>
+            <p>
+              For artifact-based detection, techniques include NPR, DM Image
+              Detection, GAN DCT Analysis, and more. For feature
+              representation-based detection, examples include CNN Detection,
+              DIRE, AEROBLADE, LASTED, and others.
+            </p>
+            <p>
+              As generative models become increasingly advanced, the need for
+              sophisticated detection methods is growing. Studies have observed
+              that each generative model leaves distinct traces in the frequency
+              domain of the generated images, which can be considered an
+              artificial fingerprint used for detection.
+            </p>
+
+            <div style="text-align: center" class="intrinsic_section">
+              <img
+                src="images/intrinsic_image.png"
+                alt="Artificial Fingerprint Example"
+                class="intrinsic_image"
+              />
+              <strong>Detecting Artificial Fingerprints in Generative Model Outputs.</strong>
+    									<p>
+											Synthetic images generated by models like StyleGAN-T, GALIP, Taming Transformers, DALL·E Mini, Stable Diffusion, and eDiff-I (top) contain unique traces known as artificial fingerprints. These fingerprints are detectable in the frequency domain as spectral peaks in the power spectra (middle) and in the spatial domain as anomalous patterns in the auto-correlation (bottom). Similar artifacts are observed in models sharing similar architectures, enabling forensic analysis of generated content.
+	
+										</p>
+            </div>
+
+            <!-- <h4>Important News:</h4> -->
+            <p>
+              According to a report by the European Union Law Enforcement
+              Agency, 90 percent of online content could be synthetically
+              generated by 2026. Generative systems like DALL-E and Stable
+              Diffusion are impressive but raise concerns about potential
+              misuse, particularly in spreading misinformation. Some examples
+              can be seen below:
+            </p>
+
+            <div class="task2_img_section">
+
+              <div class="image-container">
+                <div class="image-text">
+                  <img src="./images/taylor.png" alt="Taylor Swift Image">
+                  <p>A screenshot from a video showing Taylor Swift holding a flag reading "Trump Won" went viral in February 2024. The video, shared by numerous accounts on X, has reached over 4.5 million viewers. However, it is important to note that this content is AI-generated. For more details, see the <a href="https://www.forbes.com/sites/mattnovak/2024/02/05/viral-video-of-taylor-swift-endorsing-donald-trump-is-completely-fake/" target="_blank">Forbes story</a>.</p>
+                </div>
+                <div class="image-text">
+                  <img src="./images/pope.png" alt="Pope Image">
+                  <p>An AI-generated image of Pope Francis wearing a gigantic white puffer jacket went viral on social media platforms like Reddit and Twitter (X) in March of last year. This image sparked widespread media discussions about the potential misuse of Generative AI technologies, ultimately becoming an iconic example of AI-generated misinformation. For more details, see the <a href="https://www.forbes.com/sites/mattnovak/2023/03/26/that-viral-image-of-pope-francis-wearing-a-white-puffer-coat-is-totally-fake/" target="_blank">Forbes story</a>.</p>
+                </div>
+              </div>
+              
+              
+
+            </div>
+          </section>
+
+          <section>
+            <header class="major" id="important">
+              <h2>IMPORTANT DATES</h2>
+            </header>
+
+            <ul>
+              <li>13 October 2024 : Release of the training set.</li>
+              <li>8 November 2024 : Release of the test set.</li>
+              <li>
+                30 November 2024 : Deadline for submitting the final results.
+              </li>
+              <li>3 December 2024 : Announcement of the results.</li>
+              <li>
+                10 December 2024 : System paper submission deadline (All teams
+                are invited to submit a paper).
+              </li>
+              <li>20 December 2024 : Notification of system papers.</li>
+              <li>25 December 2024 : Camera ready submission.</li>
+            </ul>
+          </section>
+
+          <!-- organizers -->
+          <section>
+            <header class="major" id="chairs">
+              <h2>
+                ORGANIZING COMMITTEE CHAIRS
+              </h2>
+            </header>
+  
+            <div style="display: flex;flex-direction:column;gap:60px">
+  
+              <div>
+                <h4 style="text-decoration:underline">Dr. Amitava Das:</h4>
+                <div>
+  
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="./images/amitava.jpg"
+                      class="organizer-images" alt="">
+                    <br>
+  
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Dr. Amitava Das is a Core Faculty & Research Associate Professor of the
+                      Artificial Intelligence Institute, at the University of South Carolina, and an
+                      Advisory Scientist to Wipro AI. <br> <br>
+                      <strong>Research interests : </strong>Code-Mixing
+                      and Social Computing.
+                      <br> <br> <strong>Organizing Activities [selective] : </strong>
+  
+                      • Memotion @SemEval2020 • SentiMix @SemEval2020 • Computational Approaches to
+                      Linguistic Code-Switching @LREC 2020 • CONSTRAINT @AAAI2021
+  
+                    </p>
+                    <div>
+                      <b><a href="http://www.amitavadas.com/" target="_blank"
+                          rel="noopener noreferrer">Web ,</a></b>
+                      <b><a href="https://scholar.google.co.in/citations?hl=en&user=HYpfhaEAAAAJ"
+                          target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:amitava.das2@wipro.com" target="_blank"
+                          rel="noopener noreferrer">Email</a></b>
+                    </div>
+  
+  
+                  </div>
+                </div>
+  
+  
+                </div>
+              </div>
+  
+  
+  
+  
+  
+  
+  
+  
+              <div>
+                <h4 style="text-decoration:underline">Dr. Amit Sheth:</h4>
+  
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="https://aiisc.ai/defactify/img/committee/amitsheth.jpg"
+                      class="organizer-images" alt="">
+                    <br>
+  
+  
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Dr. Amit Sheth is the founding Director of the Artificial Intelligence
+                      Institute, and a CSE Professor at
+                      University of South Carolina.
+                      <br><br>
+                      <strong>Research interests : </strong>Knowledge
+                      Graph, NLP, Analysing Social
+                      Media
+                      <br><br>
+                      <strong>Organizing Activities [selective] : </strong>
+                      • Cysoc2021 @ ICWSM2021 • Emoji2021 @ICWSM2021 • KiLKGC 2021 @KGC21
+  
+                    <div>
+                      <b><a href="http://amit.aiisc.ai/" target="_blank" rel="noopener noreferrer">Web
+                          ,</a></b>
+                      <b><a href="https://scholar.google.com/citations?user=2T3H4ekAAAAJ"
+                          target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:amit@sc.edu" target="_blank"
+                          rel="noopener noreferrer">Email</a></b>
+                    </div>
+                    </p>
+  
+  
+                  </div>
+                </div>
+              </div>
+  
+              
+  
+  
+              <div>
+                <h4 style="text-decoration:underline">Aman Chadha</h4>
+  
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="./images/aman.jpg" class="organizer-images" alt="">
+                    <br>
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Aman Chadha is an Applied Sci-
+                      ence Manager at Amazon Alexa AI
+                      and a Researcher at Stanford AI.
+                      <br> <br>
+                      <strong>Research interests : </strong> Multimodal AI, On-device AI, and
+                      Human-Centered AI.
+  
+                      <br> <br>
+                      <!-- <strong>Organizing Activities [selective] : </strong>  • CONSTRAINT @AAAI2021	 -->
+                    </p>
+  
+                    <div>
+                      <b><a href="https://www.aman.info/" target="_blank"
+                          rel="noopener noreferrer">Web ,</a></b>
+                      <b><a href="https://scholar.google.com/citations?user=gPGQuBQAAAAJ&hl=en&oi=ao"
+                          target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:hi@amanchadha.com" target="_blank"
+                          rel="noopener noreferrer">Email</a></b>
+  
+                    </div>
+  
+  
+                  </div>
+                </div>
+              </div>
+  
+              <div>
+                <h4 style="text-decoration:underline">Vasu Sharma</h4>
+              
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="./images/vasu.jpeg" class="organizer-images" alt="Vasu Sharma">
+                    <br>
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Vasu Sharma is an Applied Research Scientist at FAIR (Meta AI).
+                      <br> <br>
+                      <strong>Research interests : </strong> LLMs, Multimodal AI, Data Curation and Efficiency, and Generative AI.
+                      <br> <br>
+                    </p>
+              
+                    <div>
+                      <b><a href="https://bit.ly/47bJZyk" target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:sharma.vasu55@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 style="text-decoration:underline">Aishwarya Naresh Reganti</h4>
+              
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="./images/aish.jpeg" class="organizer-images" alt="Aishwarya Naresh Reganti">
+                    <br>
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Aishwarya Naresh Reganti is an Applied Scientist at AWS Generative AI Innovation Center.
+                      <br> <br>
+                      <strong>Research interests : </strong> NLP, Artificial Social Intelligence, Graph Learning.
+                      <br> <br>
+                    </p>
+              
+                    <div>
+                      <b><a href="https://www.linkedin.com/in/areganti/" target="_blank" rel="noopener noreferrer">Web,</a></b>
+                      <b><a href="https://tinyurl.com/areganti" target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:aish.nr@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 style="text-decoration:underline">Vinija Jain</h4>
+              
+                <div class="organizer-sections" >
+                  <div class="image">
+                    <img src="./images/Vinija.jpg" class="organizer-images" alt="Vinija Jain">
+                    <br>
+                  </div>
+                  <div style="width: 70%;">
+                    <p>Vinija Jain has worked in GenAI, NLP, and RecSys domains at Amazon, Oracle, and PANW.
+                      <br> <br>
+                      <strong>Research interests : </strong> NLP, Recommender Systems.
+                      <br> <br>
+                    </p>
+              
+                    <div>
+                      <b><a href="https://vinija.ai/" target="_blank" rel="noopener noreferrer">Web,</a></b>
+                      <b><a href="https://tinyurl.com/36ncph5y" target="_blank" rel="noopener noreferrer">Google Scholar,</a></b>
+                      <b><a href="mailto:hi@vinija.ai" target="_blank" rel="noopener noreferrer">Email</a></b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+  
+  
+  
+  
+  
+            </div>
+  
+  
+          </section>
+  
+          <section class="organizers" id = "organizers">
+            <h2>ASSOCIATE ORGANIZERS</h2>
+            <div class="card-container">
+              <div class="card">
+                <img src="./images/Rajarshi.jpg" alt="Rajarshi Roy" class="organizer-image">
+                <h4>Rajarshi Roy</h4>
+                <p>Kalyani Government Engineering College</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/rajarshi-roy-learner/" target="_blank">LinkedIn</a>
+                  <a href="https://rajarshi12321.github.io/rajarshi_portfolio/" target="_blank">Portfolio</a>
+                </div>
+              </div>
+  
+              <div class="card">
+                <img src="./images/Shwetangshu.jpeg" alt="Shwetangshu Biswas" class="organizer-image">
+                <h4>Shwetangshu Biswas</h4>
+                <p>National Institute of Technology Silchar</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/shwetangshu-biswas?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+                  <a href="https://shwetangshu.vercel.app" target="_blank">Portfolio</a>
+                  <a href="https://scholar.google.com/citations?user=kBG4NdAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Ashhar.jpg" alt="Ashhar Aziz" class="organizer-image">
+                <h4>Ashhar Aziz</h4>
+                <p>IIIT Delhi</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/ashhar101/" target="_blank">LinkedIn</a>
+                  <a href="https://scholar.google.com/citations?user=uHIsCbsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="https://parthpatwa.github.io/assets/parth.jpg" alt="Subhankar Ghosh" class="organizer-image">
+                <h4>Parth Patwa</h4>
+                <p>University of California Los Angeles (UCLA)</p>
+                <div class="links">
+                  <a href="https://parthpatwa.github.io/" target="_blank" rel="noopener noreferrer">Web ,</a>
+                  <a href="mailto:parthpatwa@g.ucla.edu" target="_blank" rel="noopener noreferrer">Email</a>
+                  <a href="https://scholar.google.com/citations?user=nlpQCpsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar,</a>
+                
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Subhankar.jpeg" alt="Subhankar Ghosh" class="organizer-image">
+                <h4>Subhankar Ghosh</h4>
+                <p>Washington State University</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/subhankar-ghosh-11701a169/" target="_blank">LinkedIn</a>
+                  <a href="https://subhankarghoshss.github.io/website/" target="_blank">Portfolio</a>
+                  <a href="https://scholar.google.com/citations?user=1Q73N6IAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Shashwat.jpg" alt="Shashwat Bajpai" class="organizer-image">
+                <h4>Shashwat Bajpai</h4>
+                <p>BITS Pilani Hyderabad Campus</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/sbajpai1729/" target="_blank">LinkedIn</a>
+                  <a href="https://shashwat1729.netlify.app/" target="_blank">Portfolio</a>
+                  <a href="https://scholar.google.com/citations?user=0CBkKGYAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Shreyas.jpeg" alt="Shreyas Dixit" class="organizer-image">
+                <h4>Shreyas Dixit</h4>
+                <p>Vishwakarma Institute of Information Technology</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/srddev/" target="_blank">LinkedIn</a>
+                  <a href="mailto:shreyasrd31@gmail.com" target="_blank">Email</a>
+                  <a href="https://scholar.google.com/citations?user=pl_o-VUAAAAJ&hl=ena" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Nilesh.jpg" alt="Shreyas Dixit" class="organizer-image">
+                <h4>Nilesh Ranjan Pal</h4>
+                <p> Kalyani Government Engineering College</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/nilesh-ranjan-pal/" target="_blank">LinkedIn</a>
+                  <!-- <a href="mailto:shreyasrd31@gmail.com" target="_blank">Email</a> -->
+                  <a href="https://smallboy713102.github.io/nilesh.github.io/" target="_blank">Portfolio</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Kapil.jpg" alt="Kapil Wanaskar" class="organizer-image">
+                <h4>Kapil Wanaskar</h4>
+                <p>San José State University, California, USA</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/kapil-wanaskar-06507483/" target="_blank">LinkedIn</a>
+                  <a href="https://scholar.google.com/citations?user=fDo5HioAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/Nasrin.jpg" alt="Nasrin Imanpour" class="organizer-image">
+                <h4>Nasrin Imanpour</h4>
+                <p>University of South Carolina</p>
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/nasrin-imanpour-9212b0229" target="_blank">LinkedIn</a>
+                  <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=MA-AiBIAAAAJ&sortby=pubdate" target="_blank">Google Scholar</a>
+                </div>
+              </div>
+              
+              
+              
+            </div>
+          
+          </section>
+          
+        
+
+          <!-- <section>
+					<header class="major">
+						<h2>WEB CHAIR</h2>
+					</header>
+					<div style="display: flex;justify-content: center;">
+
+						<div>
+
+							<div class="image" style="text-align: center;">
+								<img src="https://aiisc.ai/assets/img/team/Jinendra.jpg"
+									style="height: 150px;margin: 0 auto;" alt="">
+								<br>
+								<strong>Jinendra Malekar</strong>
+								<br>
+								<strong>UNIVERSITY OF SOUTH CAROLINA, USA</strong>
+							</div>
+
+						</div>
+
+					</div>
+
+				</section> -->
+          <section>
+            <header class="major" id="contact">
+              <h2>CONTACT US</h2>
+            </header>
+
+            <ul class="contact">
+              <li class="icon solid fa-envelope">
+                <a href="mailto:amitava.santu@gmail.com">
+                  amitava.santu@gmail.com</a
+                >
+              </li>
+              <li class="icon solid fa-envelope">
+                <a href="mailto:parthpatwa@ucla.edu"> parthpatwa@ucla.edu</a>
+              </li>
+              <li class="icon solid fa-envelope">
+                <a
+                  href="mailto:defactifyaaai@gmail.com
+							"
+                  >defactifyaaai@gmail.com
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="inner">
+          <!-- Search -->
+          <!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+
+          <!-- Menu -->
+          <nav id="menu">
+            <header class="major">
+              <h2>Menu</h2>
+            </header>
+            <ul>
+              <li><a href="#about">ABOUT CT2 : AI-Generated Image Detection</a></li>
+              <li><a href="#important">Important Dates</a></li>
+              <li><a href="#chairs">ORGANIZING COMMITTEE CHAIRS</a></li>
+              <li><a href="#organizers">ASSOCIATE ORGANIZERS</a></li>
+              <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+
+            <br />
+            <br />
+            <a href="index.html" style="font-size: 20px">
+              Defactify Workshop
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
