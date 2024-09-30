@@ -49,6 +49,14 @@ p,
 		display: block;
     width: 100%;
 }
+
+
+p {
+	text-align: justify;
+
+}
+
+
 .task_box {
     background-color: #fff; /* White background */
     border-radius: 2rem; /* Rounded corners */
@@ -205,6 +213,23 @@ p,
     font-size: 90%;
 }
 
+.dataset_heading {
+    color: #f56a6a;
+}
+
+.dataset_heading a{
+	border-bottom: solid 3px #f56a6a;
+}
+
+.card p {
+	text-align: center;
+
+}
+
+.to_be_soon h4 {
+	text-align: center;
+
+}
 
 /* --------------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
@@ -351,10 +376,16 @@ p,
 	}
 
 	#header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Center content horizontally */
+		justify-content: center; /* Center content vertically */
+		padding: 10px;
+		height: 100px;
+		text-align: center; /* Ensure text is centered */
+	}
+	
+	
 
     #header .logo {
         font-size: 15px; /* Smaller logo text */
@@ -404,6 +435,9 @@ p,
 		height: 100px;
 	}
 	
+	.content p {
+		text-align: center;
+	}
 }
 
 
