@@ -231,6 +231,12 @@ p {
 
 }
 
+.task_link1 {
+	margin: 0 20px 0 0;
+}
+
+
+
 /* --------------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
     .task_box {
@@ -343,6 +349,10 @@ p {
 
 /* Media query for screens wider than 300px */
 @media screen and (max-width: 700px) {
+
+	.task_link1 {
+		margin: 0 0 0 0;
+	}
     .card {
 		background-color: #f9f9f9;
 		border: 1px solid #ddd;
