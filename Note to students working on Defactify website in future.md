@@ -18,6 +18,10 @@ First, thank you for continuing to work on the Defactify website! I’d like to 
 
    So, if you need to update shared elements, you only need to modify the corresponding file in the `extendable_htmls` folder, and the changes will propagate throughout the site.
 
+4. **Sidebar Implementation**:  
+   Due to limitations with the current extendable HTML setup, **the sidebar is not automatically included**. I have manually added the sidebar to every individual page of the website. If you need to make updates to the sidebar, you will need to edit each page manually.
+
+
 ---
 
 I hope this note clarifies most of the questions you might have. If you have any further doubts, feel free to connect with me on [**LinkedIn**](https://www.linkedin.com/in/rajarshi-roy-learner/) and I’ll be happy to assist.

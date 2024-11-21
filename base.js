@@ -12,6 +12,6 @@ loadComponent('header', '/extendable_htmls/header.html');
 loadComponent('footer', '/extendable_htmls/footer.html');
 loadComponent('organizers', '/extendable_htmls/co-organizers.html');
 loadComponent('organizing_committee_chairs', '/extendable_htmls/organizing_committee_chairs.html');
-loadComponent('sidebar', '/extendable_htmls/sidebar.html');
+// loadComponent('sidebar', '/extendable_htmls/sidebar.html');
 loadComponent('web-chair', '/extendable_htmls/web_chairs.html');
 loadComponent('contacts', '/extendable_htmls/contacts.html');
