@@ -236,6 +236,24 @@ p {
 }
 
 
+.imp-dates{
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.imp-dates h4{
+	padding-left: 10%;
+}
+
+.imp-dates h3{
+	padding-left: 10%;
+}
+
+.imp-dates .time-lines {
+	width: 45%;
+}
 
 /* --------------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
