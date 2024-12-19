@@ -15,3 +15,14 @@ loadComponent('organizing_committee_chairs', '/extendable_htmls/organizing_commi
 // loadComponent('sidebar', '/extendable_htmls/sidebar.html');
 loadComponent('web_chair', '/extendable_htmls/web_chairs.html');
 loadComponent('contacts', '/extendable_htmls/contacts.html');
+
+// Scroll to the anchor section actor loading the page 
+document.addEventListener("DOMContentLoaded", () => {
+const hash = window.location.hash;
+if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+    }
+}
+});
