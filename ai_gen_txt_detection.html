@@ -124,6 +124,285 @@
                 The authors highlight character deletions in red and character insertions in orange. Their findings indicate that human-generated text generally prompts more modifications compared to machine-generated text when rewritten.
               </p>
             </div>
+
+
+                <!-- Leader Board -->
+                <section>
+                  <header class="major" id="leaderboard">
+                    <h2>Leaderboard</h2>
+                  </header>
+                  <table id="scoresTable">
+                    <!-- <table> -->
+                      <thead>
+                          <tr>
+                              <th>S.No</th>
+                              <th>Name</th>
+                              <th>Team Name</th>
+                              <th onclick="sortTable(3)">Score for Task-A &#9650;&#9660;</th>
+                              <th onclick="sortTable(4)">Score for Task-B &#9650;&#9660;</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>Avinash Trivedi</td>
+                              <td>Sarang</td>
+                              <td>1</td>
+                              <td>0.9531</td>
+                          </tr>
+                          <tr>
+                              <td>2</td>
+                              <td>Duong Anh Kiet</td>
+                              <td>dakiet</td>
+                              <td>0.9999</td>
+                              <td>0.9082</td>
+                          </tr>
+                          <tr>
+                              <td>3</td>
+                              <td>Vijayasaradhi Indurthi</td>
+                              <td>tesla</td>
+                              <td>0.9962</td>
+                              <td>0.9218</td>
+                          </tr>
+                          <tr>
+                              <td>4</td>
+                              <td>Shrikant Malviya</td>
+                              <td>SKDU</td>
+                              <td>0.9945</td>
+                              <td>0.7615</td>
+                          </tr>
+                          <tr>
+                              <td>5</td>
+                              <td>Harika Abburi</td>
+                              <td>Drocks</td>
+                              <td>0.9941</td>
+                              <td>0.627</td>
+                          </tr>
+                          <tr>
+                              <td>6</td>
+                              <td>Manoj Saravanan</td>
+                              <td>Llama_Mamba</td>
+                              <td>0.988</td>
+                              <td>0.4551</td>
+                          </tr>
+                          <tr>
+                              <td>7</td>
+                              <td>Chinnappa Guggilla</td>
+                              <td>AI_Blues</td>
+                              <td>0.9547</td>
+                              <td>0.3697</td>
+                          </tr>
+                          <tr>
+                              <td>8</td>
+                              <td>Xinlong Zhang</td>
+                              <td>NLP_great</td>
+                              <td>0.9157</td>
+                              <td>0.1874</td>
+                          </tr>
+                          <tr>
+                              <td>9</td>
+                              <td>Shifali Agrahari</td>
+                              <td>Osint</td>
+                              <td>0.8982</td>
+                              <td>0.3072</td>
+                          </tr>
+                          <tr>
+                              <td>10</td>
+                              <td>Xiaoyu</td>
+                              <td>Xiaoyu</td>
+                              <td>0.803</td>
+                              <td>0.5696</td>
+                          </tr>
+                          <tr>
+                              <td>11</td>
+                              <td>Rohan R</td>
+                              <td>Rohan</td>
+                              <td>0.7546</td>
+                              <td>0.4053</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  
+                </section>
+
+      <!-- Leaderboard subtasks -->
+      <section id="leaderboard-subtasks">
+        <!-- Label A Leaderboard -->
+        <!-- <h2> </h2> -->
+        <header class="major" id="leaderboard-subtasks">
+          <h2>Leaderboard-Subtask</h2>
+        </header>
+        
+        <div class="leaderboars-task-tabels">
+        <div>
+            <h3>Leaderboard for Label A Scores</h3>
+            <table id="label-a-table" class="leaderboard-subtasks">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Team Name</th>
+                        <th>Score for Task-A</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Avinash Trivedi</td>
+                        <td>Sarang</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Duong Anh Kiet</td>
+                        <td>dakiet</td>
+                        <td>0.9999</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Vijayasaradhi Indurthi</td>
+                        <td>tesla</td>
+                        <td>0.9962</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shrikant Malviya</td>
+                        <td>SKDU</td>
+                        <td>0.9945</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Harika Abburi</td>
+                        <td>Drocks</td>
+                        <td>0.9941</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Manoj Saravanan</td>
+                        <td>Llama_Mamba</td>
+                        <td>0.988</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Chinnappa Guggilla</td>
+                        <td>AI_Blues</td>
+                        <td>0.9547</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Xinlong Zhang</td>
+                        <td>NLP_great</td>
+                        <td>0.9157</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Shifali Agrahari</td>
+                        <td>Osint</td>
+                        <td>0.8982</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Xiaoyu</td>
+                        <td>Xiaoyu</td>
+                        <td>0.803</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Rohan R</td>
+                        <td>Rohan</td>
+                        <td>0.7546</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Label B Leaderboard -->
+        <div>
+            <h3>Leaderboard for Label B Scores</h3>
+            <table id="label-b-table" class="leaderboard-subtasks">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Team Name</th>
+                        <th>Score for Task-B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Avinash Trivedi</td>
+                        <td>Sarang</td>
+                        <td>0.9531</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Vijayasaradhi Indurthi</td>
+                        <td>tesla</td>
+                        <td>0.9218</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Duong Anh Kiet</td>
+                        <td>dakiet</td>
+                        <td>0.9082</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shrikant Malviya</td>
+                        <td>SKDU</td>
+                        <td>0.7615</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Harika Abburi</td>
+                        <td>Drocks</td>
+                        <td>0.627</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Xiaoyu</td>
+                        <td>Xiaoyu</td>
+                        <td>0.5696</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Manoj Saravanan</td>
+                        <td>Llama_Mamba</td>
+                        <td>0.4551</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Rohan R</td>
+                        <td>Rohan</td>
+                        <td>0.4053</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Chinnappa Guggilla</td>
+                        <td>AI_Blues</td>
+                        <td>0.3697</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Shifali Agrahari</td>
+                        <td>Osint</td>
+                        <td>0.3072</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Xinlong Zhang</td>
+                        <td>NLP_great</td>
+                        <td>0.1874</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+    
+
+                
 			<section>
 				<header class="major" id="important">
 				  <h2>IMPORTANT DATES</h2>
@@ -144,7 +423,7 @@
 			  <!-- organizers -->
 			  <section id="organizing_committee_chairs"> </section>
 
-			  <section class="organizers" id = "web-chair"></section>
+			  <section class="organizers" id = "web_chair"></section>
 				  
   
 			  <section class="organizers" id = "organizers"></section>
@@ -182,7 +461,7 @@
       <li><a href="#about">ABOUT CT2: AI-Generated Text Detection</a></li>
       <li><a href="#important">Important Dates</a></li>
       <li><a href="#chairs">ORGANIZING COMMITTEE CHAIRS</a></li>
-      <li><a href="#web-chair">Web Chair</a></li>
+      <li><a href="#web_chair">Web Chair</a></li>
       <li><a href="#organizers">ASSOCIATE ORGANIZERS</a></li>
       <li><a href="#contact">CONTACT US</a></li>
     </ul>
@@ -202,5 +481,22 @@
 	  <script src="assets/js/breakpoints.min.js"></script>
 	  <script src="assets/js/util.js"></script>
 	  <script src="assets/js/main.js"></script>
+    <script>
+      function sortTable(columnIndex) {
+          const table = document.getElementById("scoresTable");
+          const rows = Array.from(table.rows).slice(1);
+          const tbody = table.tBodies[0];
+          let ascending = tbody.getAttribute("data-sort-order") !== "asc";
+
+          rows.sort((a, b) => {
+              const valA = parseFloat(a.cells[columnIndex].innerText) || 0;
+              const valB = parseFloat(b.cells[columnIndex].innerText) || 0;
+              return ascending ? valA - valB : valB - valA;
+          });
+
+          rows.forEach(row => tbody.appendChild(row)); // Reattach sorted rows
+          tbody.setAttribute("data-sort-order", ascending ? "asc" : "desc");
+      }
+  </script>
 	</body>
   </html>

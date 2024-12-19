@@ -255,6 +255,66 @@ p {
 	width: 45%;
 }
 
+
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+	border: #dca2a2;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #dca2a2;
+    padding: 12px;
+    text-align: left;
+	color: #1d3c5c;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+th:hover {
+    background-color: #e2e2e2;
+}
+
+#leaderboard-subtasks div h3{
+	display: flex;
+	justify-content: center;
+	margin-top: 10%;
+
+}
+
+#leaderboard-subtasks{
+	display: block; 
+	/* justify-content: center;
+	gap: 8%; */
+}
+
+.leaderboard-subtasks{
+	width: 100%;
+    margin: 0px 0px;
+
+}
+
+.leaderboars-task-tabels{
+	display: flex;
+	justify-content: center;
+	gap: 8%;
+}
+
 /* --------------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
     .task_box {
@@ -362,6 +422,21 @@ p {
 	.image-text p {
 		font-size: 1.4vw;
 	}
+
+	.leaderboars-task-tabels{
+		display: block; 
+		/* justify-content: center;
+		gap: 8%; */
+	}
+	
+
+	.leaderboars-task-tabels div h3{
+		/* display: none; */
+		/* display: flex; */
+		margin: 20px;
+		/* justify-content: center; */
+	}
+	
 }
 
 
