@@ -623,6 +623,8 @@ th:hover {
         flex: 0 0 26%;
         font-size: 12px;
     }
+
+
 }
 
 
@@ -713,7 +715,13 @@ th:hover {
 }
 
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 420px) {
+
+	table{
+	    font-size: 9px;
+
+	}
+
 
 	.card {
         background-color: #f9f9f9;
