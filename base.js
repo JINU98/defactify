@@ -1,4 +1,7 @@
 // Function to load reusable components
+// Just a function to get to your id section properly
+// Example: https://defactify.com/#web_chair
+
 function loadComponent(id, file) {
     const element = document.getElementById(id);
     if (!element) {
